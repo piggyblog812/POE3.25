@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>物品擺放最佳化</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>物品擺放最佳化</h1>
+    
+    <div id="controls">
+        <label>1x1：</label><input type="number" id="item_1x1" value="0" min="0"><br>
+        <label>2x1：</label><input type="number" id="item_2x1" value="0" min="0"><br>
+        <label>3x1：</label><input type="number" id="item_3x1" value="0" min="0"><br>
+        <label>1x2：</label><input type="number" id="item_1x2" value="0" min="0"><br>
+        <label>1x3：</label><input type="number" id="item_1x3" value="0" min="0"><br>
+        <label>2x2：</label><input type="number" id="item_2x2" value="0" min="0"><br>
+        <button onclick="calculatePlacement()">計算最佳放置</button>
+        <button onclick="clearInputs()">清除</button>
+    </div>
+
+    <div id="grid-container">
+        <canvas id="gridCanvas" width="240" height="280"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
