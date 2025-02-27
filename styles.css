@@ -29,6 +29,6 @@ canvas {
 }
 
 .a-img {
-    width: 10px;  /* 設定寬度 */
+    width: 50px;  /* 設定寬度 */
     height: auto;  /* 高度自動調整，維持比例 */
 }
