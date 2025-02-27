@@ -7,60 +7,63 @@ body {
     margin-bottom: 20px;
 }
 
-input {
-    width: 50px;
-    margin: 5px;
-}
-
+/* 按鈕樣式 */
 button {
     margin: 5px;
     padding: 5px 10px;
 }
 
-#grid-container {
+/* 圖片區塊 */
+#controls {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 預設 3 列 */
+    text-align: center; /* 讓文字置中 */
+    margin: auto; /* 置中顯示 */
+    gap: 15px; /* 增加間距 */
+    max-width: 600px; /* 限制最大寬度，避免過寬 */
+}
+
+/* 單一物件 */
+.item-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 讓內容置中 */
+}
+
+/* 確保圖片等比例縮小 */
+.a-img {
+    width: auto;
+    height: 60px;
+    max-width: 100%;
+}
+
+/* 輸入框 */
+input {
+    width: 50px;
+    text-align: center;
+}
+
+/* 按鈕區塊 */
+.button-container {
+    grid-column: span 3; /* 讓按鈕跨三欄 */
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    gap: 10px;
+    margin-top: 10px;
 }
 
-canvas {
-    border: 2px solid black;
-    background-color: white;
+/* 📱 Media Query：手機版（小於 768px） */
+@media (max-width: 768px) {
+    #controls {
+        grid-template-columns: repeat(2, 1fr); /* 改成 2 列 */
+        max-width: 400px;
+    }
 }
 
-#controls {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr); /* 三列等寬 */
-            gap: 5px; /* 間距 */
-            text-align: center; /* 讓文字置中 */
-            margin: auto; /* 置中顯示 */
-        }
-	
-	.item-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center; /* 讓內容置中 */
-        }
-
-        .a-img {
-            width:  auto;/* 圖片大小 */
-            height: 80px;
-        }
-
-        label {
-            font-weight: bold;
-            margin-top: 5px;
-        }
-
-        input {
-            width: 50px;
-            text-align: center;
-        }
-
-        .button-container {
-            grid-column: span 3; /* 讓按鈕跨三欄 */
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-top: 10px;
-        }
+/* 📱 Media Query：更小的手機（小於 480px） */
+@media (max-width: 480px) {
+    #controls {
+        grid-template-columns: repeat(1, 1fr); /* 改成單列 */
+        max-width: 300px;
+    }
+}
