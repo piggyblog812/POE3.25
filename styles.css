@@ -27,3 +27,8 @@ canvas {
     border: 2px solid black;
     background-color: white;
 }
+
+.a-img {
+    width: 50px;  /* 設定寬度 */
+    height: auto;  /* 高度自動調整，維持比例 */
+}
