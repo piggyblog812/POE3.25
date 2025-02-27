@@ -28,7 +28,39 @@ canvas {
     background-color: white;
 }
 
-.a-img {
-    width: 50px;  /* 設定寬度 */
-    height: auto;  /* 高度自動調整，維持比例 */
-}
+#controls {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 三列等寬 */
+            gap: 5px; /* 間距 */
+            text-align: center; /* 讓文字置中 */
+            margin: auto; /* 置中顯示 */
+        }
+	
+	.item-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* 讓內容置中 */
+        }
+
+        .a-img {
+            width:  auto;/* 圖片大小 */
+            height: 80px;
+        }
+
+        label {
+            font-weight: bold;
+            margin-top: 5px;
+        }
+
+        input {
+            width: 50px;
+            text-align: center;
+        }
+
+        .button-container {
+            grid-column: span 3; /* 讓按鈕跨三欄 */
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
